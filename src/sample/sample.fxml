@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?scenebuilder-stylesheet fullStructureCSS.css?>
+
+<GridPane alignment="center" hgap="10" stylesheets="@../sample/fullStructureCSS.css" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainController">
+   <children>
+      <VBox prefHeight="130.0" prefWidth="263.0">
+         <children>
+            <TextField fx:id="txtLogin" promptText="users login" />
+            <PasswordField fx:id="pswPassword" promptText="users password">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin></PasswordField>
+            <HBox prefHeight="45.0" prefWidth="207.0">
+               <children>
+                  <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#loginClick" prefHeight="25.0" prefWidth="82.0" text="Log in">
+                     <padding>
+                        <Insets top="25.0" />
+                     </padding></Button>
+                  <Button fx:id="btnRegistration" mnemonicParsing="false" onAction="#Registr" prefHeight="25.0" prefWidth="202.0" text="Registration form">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets top="25.0" />
+                     </padding>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin>
+            </HBox>
+            <TextField promptText="test Date" />
+         </children>
+      </VBox>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
