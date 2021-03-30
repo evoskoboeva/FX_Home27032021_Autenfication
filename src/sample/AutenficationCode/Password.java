@@ -5,19 +5,19 @@ import sample.Main;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Password {
+public class Password implements java.io.Serializable{
     private String password;
     private boolean isActive;
-    private LocalDate date;
+    //private LocalDate date;
 
-    public LocalDate getDate() {
+    /*public LocalDate getDate() {
         return date;
     }
 
     public void setDate(LocalDate date) {
         this.date = date;
     }
-
+*/
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -41,13 +41,13 @@ public class Password {
 
     @Override
     public String toString() {
-        return password + " is Active = " + isActive+ ", date= "+this.date;
-    }
+        return password + isActive;
+    } //" is Active = " +
 
     public Password(String password) {
         if (isValid(password)) {
             this.password = password;
-            this.date =date;
+            //this.date =date;
 
             this.setActive(true);
         } else {

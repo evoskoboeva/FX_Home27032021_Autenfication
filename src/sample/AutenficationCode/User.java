@@ -5,19 +5,30 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-public class User {
+public class User implements java.io.Serializable {
     private String login;
+
+
+
+    public User(String login, Passwords passwords) {
+        this.login = login;
+        this.passwords = passwords;
+    }
+
     private  Passwords passwords;
 
     @Override
     public String toString() {
-        return "User{" +
-                "login='" + login + '\'' +
-                ", passwords= " + passwords +
-                               '}';
+        return "(" +
+                 login + '\'' + passwords +")";
     }
 
-    public User(String login, String password, LocalDate date) {
+   /* public User(String login, Passwords passwords) {
+        this.login = login;
+        this.passwords = passwords;
+    }
+*/
+    public User(String login, String password) {
         this.login = login;
         this.passwords = new Passwords(password);
         if (!passwords.getPasswords().get(0).isActive()){

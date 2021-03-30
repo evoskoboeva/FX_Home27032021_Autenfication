@@ -9,7 +9,6 @@
     <children>
         <VBox prefHeight="95.0" prefWidth="263.0">
             <children>
-            <DatePicker fx:id="dpToday" />
             <Label text="Register new user" />
                 <TextField fx:id="txtLogin" promptText="users login" />
                 <PasswordField fx:id="pswPassword" promptText="users password">
@@ -22,7 +21,7 @@
                 <HBox prefHeight="45.0" prefWidth="207.0">
                     <children>
                         <Button fx:id="btnLogin1" mnemonicParsing="false" onAction="#registerClick" prefHeight="27.0" prefWidth="110.0" text="Registration" />
-                        <Button fx:id="btnRegistration1" cancelButton="true" mnemonicParsing="false" onAction="#cancelClick" prefHeight="25.0" prefWidth="114.0" text="Cancel">
+                        <Button fx:id="btnRegistrationAll" cancelButton="true" mnemonicParsing="false" onAction="#ReportALL" prefHeight="25.0" prefWidth="114.0" text="Report  ALL in file">
                      <HBox.margin>
                         <Insets left="25.0" />
                      </HBox.margin></Button>

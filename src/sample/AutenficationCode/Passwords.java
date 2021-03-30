@@ -4,19 +4,23 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Passwords {
+public class Passwords implements java.io.Serializable{
     private ArrayList<Password>passwords;
 
 
     @Override
     public String toString() {
         return
-                "passwords( " + passwords+ ')';
+                "passwords( " + passwords+ ")";
     }
 
     public Passwords(String password) {
         this.passwords = new ArrayList<>();
         this.passwords.add(new Password(password));
+    }
+
+    public Passwords(ArrayList<Password> passwords) {
+        this.passwords = passwords;
     }
 
     public ArrayList<Password> getPasswords() {
@@ -31,7 +35,7 @@ public class Passwords {
         return true;
     }
 
-    public boolean add (String password, LocalDate date){
+    public boolean add (String password){
         if (canBeAdded(password)){
             for (Password pass:passwords)
             {
@@ -58,12 +62,12 @@ public class Passwords {
         else
             return false;
     }
-    public LocalDate isCorrectActivePasswordDate(String password){
+   /* public LocalDate isCorrectActivePasswordDate(String password){
         if (passwords.get(passwords.size()-1).getPassword().equals(password))
             return isCorrectActivePasswordDate(password);
         else
             return null;
     }
-
+*/
 
 }

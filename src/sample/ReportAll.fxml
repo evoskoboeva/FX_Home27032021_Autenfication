@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?scenebuilder-stylesheet fullStructureCSS.css?>
+
+<GridPane alignment="center" hgap="10" stylesheets="@../sample/fullStructureCSS.css" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ReportAllController">
+   <children>
+      <VBox prefHeight="130.0" prefWidth="263.0">
+         <children>
+            <HBox prefHeight="45.0" prefWidth="207.0">
+               <children>
+                  <Button fx:id="btnReport" mnemonicParsing="false" onAction="#Report" prefHeight="27.0" prefWidth="243.0" text="All users from file">
+                     <padding>
+                        <Insets top="25.0" />
+                     </padding></Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <TextArea fx:id="taReport" prefHeight="247.0" prefWidth="324.0" promptText="all users" GridPane.rowIndex="1" />
+      <TextArea fx:id="taJson" prefHeight="200.0" prefWidth="200.0" promptText="all users Json" GridPane.rowIndex="2" />
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints maxHeight="239.0" minHeight="126.0" prefHeight="134.0" />
+      <RowConstraints maxHeight="151.0" minHeight="150.0" prefHeight="150.0" />
+   </rowConstraints>
+</GridPane>

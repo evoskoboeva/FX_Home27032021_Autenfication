@@ -1,5 +1,10 @@
 package sample;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.PropertyAccessor;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,11 +15,19 @@ import sample.AutenficationCode.Passwords;
 import sample.AutenficationCode.User;
 import sample.AutenficationCode.Users;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.LocalDate;
 
 public class Main extends Application {
 
+    public static ObjectMapper objectMapper = new ObjectMapper() .
+            configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);;
+
     public  static Users users = new Users();
+
+
+
 
 
     @Override
@@ -26,16 +39,17 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
 
-        User user = new User("qwerty", "Password.123", LocalDate.of(2021, 01, 01));
-        user.getPasswords().add("Password.456", LocalDate.of(2021,01,20));
-        user.getPasswords().add("Password.789",LocalDate.of(2021, 01, 31));
-
+        User user = new User("qwerty", "Password.123");
+        user.getPasswords().add("Password.456");
+        user.getPasswords().add("Password.789");
         users.add(user);
-        users.add(new User("asdfg","password_1Q",LocalDate.of(2021,02,01)));
-        users.add(new User("login","",LocalDate.of(2021,02,02)));
+        users.add(new User("asdfg","password_1Q"));
+        users.add(new User("login",""));
+        System.out.println(users.getUsers().size());
 
 
         System.out.println(users);
+
 
 
     }

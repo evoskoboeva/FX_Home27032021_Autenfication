@@ -36,7 +36,6 @@
                   <Insets top="25.0" />
                </VBox.margin>
             </HBox>
-            <TextField promptText="test Date" />
          </children>
       </VBox>
    </children>
