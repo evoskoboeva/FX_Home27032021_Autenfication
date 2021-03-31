@@ -24,7 +24,7 @@ public class ReportAllController extends RegistFormController {
 
 
     public void Report(ActionEvent actionEvent) throws IOException {
-        Main.users.Load();
+       // Main.users.Load();
         taReport.setText(Main.users.toString());
 
         Main.users.readJson();

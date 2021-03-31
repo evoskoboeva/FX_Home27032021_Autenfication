@@ -1,8 +1,6 @@
 package sample.AutenficationCode;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.JsonNode;
 import sample.Main;
 
@@ -46,7 +44,7 @@ public class Users implements java.io.Serializable{
             out.close();
             //fileOut.flush();
             fileOut.close();
-            System.out.print("Serialized data is saved in file: " + "./user.ser");
+            System.out.print("Serialized data is saved in file: " + "./user.ser ");
         } catch (IOException ex)
         {
             ex.printStackTrace();

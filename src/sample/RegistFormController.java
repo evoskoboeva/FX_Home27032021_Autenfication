@@ -32,7 +32,7 @@ public class RegistFormController {
 
 
         Main.users.add(user);
-        Main.users.Save();
+        //Main.users.Save();
         //Main.users.Clear();
         //Jackson library serialization
 

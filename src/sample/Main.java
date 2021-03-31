@@ -26,8 +26,12 @@ public class Main extends Application {
 
     public  static Users users = new Users();
 
+    @Override
+    public void stop(){
+        Main.users.Save();
+        System.out.println("Stage is closing");
 
-
+    }
 
 
     @Override
@@ -40,14 +44,14 @@ public class Main extends Application {
         primaryStage.show();
 
         User user = new User("qwerty", "Password.123");
-        user.getPasswords().add("Password.456");
+        /*user.getPasswords().add("Password.456");
         user.getPasswords().add("Password.789");
         users.add(user);
         users.add(new User("asdfg","password_1Q"));
         users.add(new User("login",""));
         System.out.println(users.getUsers().size());
-
-
+*/
+        Main.users.Load();
         System.out.println(users);
 
 
