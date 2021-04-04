@@ -20,6 +20,7 @@ public class Users implements java.io.Serializable{
 
     public void readJson() throws IOException {
         JsonNode users = Main.objectMapper.readTree(new File("json_users.json"));
+
     }
 
     public void writeJson() throws IOException {

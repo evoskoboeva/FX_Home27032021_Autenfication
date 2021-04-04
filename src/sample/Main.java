@@ -25,11 +25,13 @@ public class Main extends Application {
             configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);;
 
     public  static Users users = new Users();
+    static SaveClass saveClass;
 
     @Override
     public void stop(){
-        Main.users.Save();
-        System.out.println("Stage is closing");
+        //Main.users.Save();
+         saveClass = new SaveClass();
+         saveClass.start();
 
     }
 
